@@ -11,7 +11,7 @@ body {
 
   text-align: center;
   background-image: url('https://storage.prompt-hunt.workers.dev/632b7202-1aea-4a3d-8933-7940d887196b');
-  background-color: deepskyblue;
+  background-color: lightgreen;
   transition: background-color 0.3s ease;
 }
 p{
