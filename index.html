@@ -9,7 +9,7 @@
 <body>
   <header class="hero">
     <div class="container">
-    <h2> WELL COME TO MSS GRAGE-11<sup>4</sup> and 11<sup>5</sup> WEB DESIGN STUDENT PORT</h2>
+    <h2> WELL COME TO MSS GRAGE-11<sup>4</sup> and 11<sup>5</sup> WEB DESIGN STUDENT ONLINEPORT</h2>
       <p>Empowering Education, Inspiring Futures</p>
       <!--<a href="#G-9" class="btn-primary" style= "color:rgb(228, 217, 217);"> G-9</a>
       <a href="#G-10" class="btn-primary"  style="background-color: yellow; color: black;"> G-10</a>
@@ -30,7 +30,10 @@
 
     </div>
   </section>
-  <div id="clock"></div>
+<div class="clock">
+    <div class="time" id="time"></div>
+  </div>
+
   <footer>
     <div class="container">
       <p>&copy; 2025 MSS | Designed for Excellence</p>
@@ -40,15 +43,30 @@
   </footer>
 
   <script>
-     // time 
-     function updateClock() {
+    // Update clock every second
+    function updateClock() {
       const now = new Date();
-      const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' }); //HH:MM:SS
-      document.getElementById('clock').textContent = timeString;
+      let hours = now.getHours();
+      let minutes = now.getMinutes();
+      let seconds = now.getSeconds();
+      const period = hours >= 12 ? "PM" : "AM"; // Determine AM/PM
+
+      // Convert to 12-hour format
+      hours = hours % 12 || 12; // 0 becomes 12, 13 becomes 1, etc.
+      hours = hours < 10 ? "0" + hours : hours;
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      seconds = seconds < 10 ? "0" + seconds : seconds;
+
+      // Format time with AM/PM
+      const timeString = `${hours}<span class="colon">:</span>${minutes}<span class="colon">:</span>${seconds} ${period}`;
+      
+      // Update display
+      document.getElementById("time").innerHTML = timeString;
     }
 
-    setInterval(updateClock, 1000); // Update every second
-    updateClock(); // Initial update
+    // Initial call and update every second
+    updateClock();
+    setInterval(updateClock, 1000);
   </script>
 </body>
 </html>
