@@ -160,10 +160,10 @@ section .lbl{
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
 }
-#clock {
+/*#clock {
   position: fixed; /* Key change: fixed positioning */
   top: 10px; /* Adjust top position as needed */
-  right: 10px; /* Adjust right position as needed */
+ right: 10px; /* Adjust right position as needed */
   font-size: 40px; /* Adjust font size as needed */
   font-family: monospace; /* Optional: Use a monospace font */
   color: #ffffff; /* Choose your color */
@@ -172,7 +172,39 @@ section .lbl{
   border-radius: 5px; /* Optional rounded corners */
   z-index: 100; /* Ensure it's above other content */
 }
+*/
+.clock {
+  font-family: 'Share Tech Mono', monospace; 
+  width: 120px;
+  height: 120px;
+  border: 5px solid #333;
+  border-radius: 50%;
+  background: lightblue; /* Changed background color */
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
 
+/* Time display */
+.time {
+  font-family: 'Orbitron', Arial, sans-serif; /* Attractive font */
+  font-size: 24px;
+  color: #333;
+  font-weight: 700; /* Bold for emphasis */
+  text-align: center;
+}
+
+/* Blinking colon */
+@keyframes blink {
+  50% { opacity: 0; }
+}
+.colon {
+  animation: blink 1s step-end infinite;
+}
 /* Footer */
 footer {
   background: #1f7d40;
