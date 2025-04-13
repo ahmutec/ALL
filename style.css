@@ -150,6 +150,7 @@ header {
   font-size: clamp(1rem, 4vw, 1.5rem);
 }
 
+
 /* Footer */
 footer {
   background: #1f7d40;
@@ -168,6 +169,30 @@ footer p {
   font-size: clamp(0.75rem, 2.5vw, 0.9rem);
 }
 
+/* Responsive Design */
+
+/* Small screens (mobile, up to 600px) */
+@media (max-width: 600px) {
+  .hero {
+    padding: clamp(1rem, 4vw, 1.5rem) 0.5rem;
+  }
+
+  .section button {
+    width: clamp(60px, 20vw, 80px); /* Fixed: Ensures buttons shrink appropriately */
+    height: clamp(60px, 20vw, 80px);
+    font-size: clamp(0.9rem, 3.5vw, 1.2rem);
+    padding: 0.3rem;
+  }
+
+  .section .container {
+    gap: 0.75rem;
+    padding: 0.5rem;
+  }
+
+  .footer {
+    padding: 0 1rem;
+  }
+}
 /* Responsive Design */
 
 /* Small screens (mobile, up to 600px) */
