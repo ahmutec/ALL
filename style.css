@@ -100,6 +100,7 @@ section .lbl {
 }
 
 /* Clock */
+/* Clock */
 .clock {
   position: fixed;
   font-family: 'Share Tech Mono', monospace;
@@ -108,23 +109,35 @@ section .lbl {
   border: 5px solid #34dbf8;
   border-radius: 50%;
   background: black;
-  top: 0;
-  right: 0;
+  top: 0; /* Top-right corner */
+  right: 0; /* Top-right corner */
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   color: #daf6ff;
   text-shadow: 0 0 20px rgb(51, 89, 83), 0 0 20px rgba(10, 175, 230, 0);
-  z-index: 2000; /* High z-index to appear above everything */
+  z-index: 2000; /* Above all elements */
 }
 
 .time {
   font-family: 'Orbitron', Arial, sans-serif;
-  font-size: clamp(16px, 2vw, 24px);
+  font-size: clamp(16px, 2vw, 24px); /* Base size for hours and minutes */
   font-weight: 700;
   text-align: center;
   letter-spacing: 0.05em;
+}
+
+.seconds {
+  font-size: 70%; /* Smaller than hours and minutes (relative to .time) */
+}
+
+/* Blinking colon */
+@keyframes blink {
+  50% { opacity: 0; }
+}
+.colon {
+  animation: blink 1s step-end infinite;
 }
 
 /* Blinking colon */
