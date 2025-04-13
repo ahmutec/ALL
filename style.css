@@ -151,38 +151,48 @@ header {
 }
 
 /* Footer */
-/*footer {
-  background: #0000ff;
+footer {
+  background: #1f7d40;
   color: white;
   text-align: center;
-  padding: clamp(0.3rem, 1vw, .5rem);
-  width: 100%;
-  margin-top: auto; /* Sticks to bottom */
+  padding: clamp(0.5rem, 2vw, 1rem);
 }
 
-/*footer p {
-  font-size: clamp(0.7rem, 2vw, 0.9rem);
-}
- Footer */
-footer {
-  background: darkblue;
-  color: white;
-  text-align: center;
-  padding: 1px; /* Fixed 1px padding */
-  width: 100%;
-  margin: 0; /* No margins except for sticky behavior */
-  margin-top: auto; /* Keep footer at bottom */
+.footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 5vw, 2rem); /* Responsive padding */
 }
 
 footer p {
-  font-size: clamp(0.6rem, 1.5vw, 0.8rem); /* Smaller, responsive font */
-  margin: 0; /* Remove any internal margins */
+  font-size: clamp(0.75rem, 2.5vw, 0.9rem);
 }
-/* Animations */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+
+/* Responsive Design */
+
+/* Small screens (mobile, up to 600px) */
+@media (max-width: 600px) {
+  .hero {
+    padding: clamp(1rem, 4vw, 1.5rem) 0.5rem;
+  }
+
+  .section button {
+    width: clamp(60px, 20vw, 80px); /* Fixed: Ensures buttons shrink appropriately */
+    height: clamp(60px, 20vw, 80px);
+    font-size: clamp(0.9rem, 3.5vw, 1.2rem);
+    padding: 0.3rem;
+  }
+
+  .section .container {
+    gap: 0.75rem;
+    padding: 0.5rem;
+  }
+
+  .footer {
+    padding: 0 1rem;
+  }
 }
+
 
 /* Media Queries for Responsiveness */
 @media (max-width: 1024px) {
