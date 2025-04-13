@@ -32,7 +32,7 @@ header {
   padding: 1rem;
   position: sticky; /* Sticks header to top */
   top: 0;
-  z-index: 1000; /* Ensures header stays above other content */
+ /* z-index: 1000; /* Ensures header stays above other content */
   width: 100%;
 }
 
