@@ -152,10 +152,10 @@ header {
 
 /* Footer */
 footer {
-  background: #333;
+  background: #0000ff;
   color: white;
   text-align: center;
-  padding: clamp(0.5rem, 2vw, 1rem);
+  padding: clamp(0.3rem, 1vw, .5rem);
   width: 100%;
   margin-top: auto; /* Sticks to bottom */
 }
