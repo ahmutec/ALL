@@ -66,7 +66,7 @@ header {
 
 .hero p {
   font-size: clamp(1rem, 3vw, 1.2rem);
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   animation: fadeIn 2s ease-out;
 }
 
@@ -97,28 +97,6 @@ header {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transform: scale(1.25);
 }
-/*  section .lbl {
-  background: rgb(96, 7, 229);
-  color: #f0eef3;
-  padding: 0.8rem 1.5rem;
-  border: none;
-  border-radius: 25px;
-  font-size: clamp(0.9rem, 2vw, 1rem);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: bold;
-  width: auto; /* More flexible width */
-/*   min-width: 120px; /* Prevents button from becoming too small */
-/*   display: inline-block;
-}
-
-.lbl:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-  background: #a30a0a;
-  border: 2px solid #27ae60;
-}
-
- */
 /* Clock */
 .clock {
   position: fixed;
