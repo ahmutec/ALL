@@ -10,25 +10,24 @@
   <header class="hero">
     <h1>Welcome to Ahmu CCA- Student Portal</h1>
     <p>Empowering Education, Inspiring Futures</p>
-    <section id="wd" class="section">
-      <div class="container">
-       <a href="https://ahmutec.github.io/ACCA/">
-          <button class="btn-primary">AMSS </button>
-        </a>
-        <a href="https://ahmutec.github.io/studentmark/">
-          <button class="btn-primary">MSS</button>
-        </a>
-     <a href="https://script.google.com/macros/s/AKfycbwgR-15hF9IMkxWFxRP9sKXqYLvkUBhT73yt0Eb10HaKx8parmJoBJgaI2iteCnnhENRw/exec">
-      <button class="btn-primary" >ATTENDANCE</button>
-     </a>
-
-      </div>
-    </section>
-      <p style="border: 2px red; border-radius: 20px; font-family: 'Courier New', Courier, monospace; font-size: 15px;"><b>Access your Class Room Assessments  (quizes, project work, classwork,mid-exam, final-exam and Total(Sum) from 100%) </b>.</p>
   </header>
 
+  <section  class="section">
+    <div class="container">
+      <a href="https://ahmutec.github.io/ACCA/">
+        <button class="btn-primary">AMSS</button>
+      </a>
+      <a href="https://ahmutec.github.io/studentmark/">
+        <button class="btn-primary">MSS</button>
+      </a>
+      <a href="https://script.google.com/macros/s/AKfycbwgR-15hF9IMkxWFxRP9sKXqYLvkUBhT73yt0Eb10HaKx8parmJoBJgaI2iteCnnhENRw/exec">
+        <button class="btn-primary">ATTENDANCE</button>
+      </a>
+    </div>
+    <p class="info-text"><b>Access your Class Room Assessments (quizzes, project work, classwork, mid-exam, final-exam and Total(Sum) from 100%)</b>.</p>
+  </section>
+
   <main>
-    
     <!-- Main content can go here if needed -->
   </main>
 
@@ -43,28 +42,19 @@
   </div>
 
   <script>
-    // Update clock every second
     function updateClock() {
       const now = new Date();
       let hours = now.getHours();
       let minutes = now.getMinutes();
       let seconds = now.getSeconds();
-      const period = hours >= 12 ? "PM" : "AM"; // Determine AM/PM
-
-      // Convert to 12-hour format
-      hours = hours % 12 || 12; // 0 becomes 12, 13 becomes 1, etc.
+      const period = hours >= 12 ? "PM" : "AM";
+      hours = hours % 12 || 12;
       hours = hours < 10 ? "0" + hours : hours;
       minutes = minutes < 10 ? "0" + minutes : minutes;
       seconds = seconds < 10 ? "0" + seconds : seconds;
-
-      // Format time with AM/PM
       const timeString = `${hours}<span class="colon">:</span>${minutes}<span class="colon">:</span>${seconds} ${period}`;
-      
-      // Update display
       document.getElementById("time").innerHTML = timeString;
     }
-
-    // Initial call and update every second
     updateClock();
     setInterval(updateClock, 1000);
   </script>
