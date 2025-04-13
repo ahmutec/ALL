@@ -78,6 +78,25 @@ header {
   transition: all 0.3s ease;
 }
 
+.section button {
+  background: #27ffdd;
+  padding: clamp(0.3rem, 1.5vw, 0.5rem); /* Responsive padding */
+  border: none;
+  border-radius: 10px;
+  width: clamp(80px, 15vw, 100px); /* Responsive width */
+  height: clamp(80px, 15vw, 100px); /* Responsive height */
+  font-size: clamp(1rem, 2vw, 1.5rem); /* Responsive font size */
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s ease;
+}
+
+.section button:hover {
+  color: white;
+  background: linear-gradient(120deg, #0fb0f5, #ffe405);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.25);
+}
 section .lbl {
   background: rgb(96, 7, 229);
   color: #f0eef3;
