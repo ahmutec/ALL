@@ -91,6 +91,7 @@ main {
   padding: clamp(1rem, 3vw, 2rem); /* Responsive padding */
 }
 
+
 /* Footer */
 footer {
   background: #1f7d40;
