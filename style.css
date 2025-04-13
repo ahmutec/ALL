@@ -101,6 +101,7 @@ section .lbl {
 
 /* Clock */
 .clock {
+  z-index: 2000;
   position: fixed;
   font-family: 'Share Tech Mono', monospace;
   width: clamp(80px, 10vw, 120px); /* Responsive size */
