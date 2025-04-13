@@ -101,7 +101,6 @@ section .lbl {
 
 /* Clock */
 .clock {
-  z-index: 2000;
   position: fixed;
   font-family: 'Share Tech Mono', monospace;
   width: clamp(80px, 10vw, 120px); /* Responsive size */
@@ -117,6 +116,7 @@ section .lbl {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   color: #daf6ff;
   text-shadow: 0 0 20px rgb(51, 89, 83), 0 0 20px rgba(10, 175, 230, 0);
+  z-index: 2000; /* High z-index to appear above everything */
 }
 
 .time {
