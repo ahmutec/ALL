@@ -151,7 +151,7 @@ header {
 }
 
 /* Footer */
-footer {
+/*footer {
   background: #0000ff;
   color: white;
   text-align: center;
@@ -160,10 +160,24 @@ footer {
   margin-top: auto; /* Sticks to bottom */
 }
 
-footer p {
+/*footer p {
   font-size: clamp(0.7rem, 2vw, 0.9rem);
 }
+ Footer */
+footer {
+  background: darkblue;
+  color: white;
+  text-align: center;
+  padding: 1px; /* Fixed 1px padding */
+  width: 100%;
+  margin: 0; /* No margins except for sticky behavior */
+  margin-top: auto; /* Keep footer at bottom */
+}
 
+footer p {
+  font-size: clamp(0.6rem, 1.5vw, 0.8rem); /* Smaller, responsive font */
+  margin: 0; /* Remove any internal margins */
+}
 /* Animations */
 @keyframes fadeIn {
   from { opacity: 0; }
