@@ -32,7 +32,7 @@ header {
   padding: 1rem;
   position: sticky; /* Sticks header to top */
   top: 0;
- /* z-index: 1000; /* Ensures header stays above other content */
+  z-index: 1000; /* Ensures header stays above other content */
   width: 100%;
 }
 
@@ -97,7 +97,7 @@ header {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transform: scale(1.25);
 }
-section .lbl {
+/*  section .lbl {
   background: rgb(96, 7, 229);
   color: #f0eef3;
   padding: 0.8rem 1.5rem;
@@ -107,8 +107,8 @@ section .lbl {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
   width: auto; /* More flexible width */
-  min-width: 120px; /* Prevents button from becoming too small */
-  display: inline-block;
+/*   min-width: 120px; /* Prevents button from becoming too small */
+/*   display: inline-block;
 }
 
 .lbl:hover {
@@ -118,7 +118,7 @@ section .lbl {
   border: 2px solid #27ae60;
 }
 
-/* Clock */
+ */
 /* Clock */
 .clock {
   position: fixed;
