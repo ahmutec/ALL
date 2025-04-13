@@ -1,0 +1,173 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+  background-image: url('https://th.bing.com/th/id/R.84ae60fcae6fd9f16c36e745676e6752?rik=0bBhy8CL%2bmxtZw&riu=http%3a%2f%2fwallpapercave.com%2fwp%2fGTrby6G.jpg&ehk=eqVeTLl4%2b%2f38QuCaxbE3LyI3M65fD7T5gtaz%2b4baVt8%3d&risl=&pid=ImgRaw&r=0');
+  background-color: deepskyblue;
+  background-size: cover; /* Ensures background image scales properly */
+  background-position: center; /* Centers the background image */
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.3s ease;
+}
+
+p {
+  font-weight: bold;
+  color: rgb(242, 241, 241);
+}
+
+/* Hero Section */
+.hero {
+
+   background: repeating-conic-gradient(#553c9a 0%, #553c9a 10%, #ee4b2b 10%, #ee4b2b 20%, 
+#00c2cb 20%, #00c2cb 30%);
+  color: white;
+  text-align: center;
+  padding: 4rem 0;
+  clip-path: polygon(6% 10%, 90% 6%, 100% 100%, 0% 100%);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  stroke: #FDB731;
+  animation-delay: -5s;
+  /*
+  background: linear-gradient(#32a852, #1f7d40);
+  color: white;
+  text-align: center;
+  padding: clamp(1.5rem, 5vw, 2rem) clamp(1rem, 3vw, 1.5rem); /* Responsive padding /
+  clip-path: polygon(6% 10%, 92% 10%, 100% 100%, 0% 100%);
+  text-shadow: 0 0 20px rgba(10, 175, 230, 1), 0 0 20px rgba(10, 175, 230, 0);
+  transition: all 0.4s ease;  */
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 6vw, 2.5rem); /* Scales text smoothly */
+  margin-bottom: clamp(0.5rem, 2vw, 1rem);
+}
+
+.hero p {
+  font-size: clamp(1rem, 3.5vw, 1.25rem);
+  margin-bottom: clamp(1rem, 4vw, 2rem);
+}
+
+/* Section with Buttons */
+.section .container {
+  display: flex;
+  justify-content: center;
+  gap: clamp(1rem, 3vw, 1.5rem); /* Responsive gap */
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+.section button {
+  background: #27ffdd;
+  padding: clamp(0.3rem, 1.5vw, 0.5rem); /* Responsive padding */
+  border: none;
+  border-radius: 10px;
+  width: clamp(80px, 15vw, 100px); /* Responsive width */
+  height: clamp(80px, 15vw, 100px); /* Responsive height */
+  font-size: clamp(1rem, 2vw, 1.5rem); /* Responsive font size */
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s ease;
+}
+
+.section button:hover {
+  color: white;
+  background: linear-gradient(120deg, #0fb0f5, #ffe405);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.25);
+}
+
+/* Main Content */
+main {
+  flex: 1;
+  padding: clamp(1rem, 3vw, 2rem); /* Responsive padding */
+}
+
+/* Footer */
+footer {
+  background: #1f7d40;
+  color: white;
+  text-align: center;
+  padding: clamp(0.5rem, 2vw, 1rem);
+}
+
+.footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 5vw, 2rem); /* Responsive padding */
+}
+
+footer p {
+  font-size: clamp(0.75rem, 2.5vw, 0.9rem);
+}
+
+/* Responsive Design */
+
+/* Small screens (mobile, up to 600px) */
+@media (max-width: 600px) {
+  .hero {
+    padding: clamp(1rem, 4vw, 1.5rem) 0.5rem;
+  }
+
+  .section button {
+    width: clamp(60px, 20vw, 80px); /* Fixed: Ensures buttons shrink appropriately */
+    height: clamp(60px, 20vw, 80px);
+    font-size: clamp(0.9rem, 3.5vw, 1.2rem);
+    padding: 0.3rem;
+  }
+
+  .section .container {
+    gap: 0.75rem;
+    padding: 0.5rem;
+  }
+
+  .footer {
+    padding: 0 1rem;
+  }
+}
+
+/* Medium screens (tablets, 601px to 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .hero {
+    padding: clamp(1.5rem, 5vw, 2rem) 1rem;
+  }
+
+  .section button {
+    width: clamp(90px, 12vw, 100px);
+    height: clamp(90px, 12vw, 100px);
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+  }
+
+  .section .container {
+    gap: 1.25rem;
+  }
+
+  .footer {
+    padding: 0 1.5rem;
+  }
+}
+
+/* Large screens (desktops, above 1024px) */
+@media (min-width: 1025px) {
+  .hero {
+    padding: clamp(2rem, 4vw, 3rem) 2rem;
+  }
+
+  .section button {
+    width: 100px;
+    height: 100px;
+    font-size: 1.5rem;
+  }
+
+  .section .container {
+    gap: 1.5rem;
+  }
+}
