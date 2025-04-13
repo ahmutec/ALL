@@ -140,13 +140,6 @@ section .lbl {
   animation: blink 1s step-end infinite;
 }
 
-/* Blinking colon */
-@keyframes blink {
-  50% { opacity: 0; }
-}
-.colon {
-  animation: blink 1s step-end infinite;
-}
 
 /* Sections */
 .section {
